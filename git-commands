@@ -3,32 +3,50 @@
 ## http://ndpsoftware.com/git-cheatsheet.html
 ## https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
 
+#######################################################
 
-## configure your user.name and user.email
+## Initial steps to setup git: 
+
+# 1. download and install git
+TBC
+
+## 2. configure your user.name and user.email
 git config --global user.name "<User Name>"
 git config --global user.email "user.name@gmail.com"
-git config --list
+git config --list # to check your config
 
-## get help
-git help <verb>
-git help config
+#######################################################
 
-## steps to add files to github repo:
+## Steps to add files to github repo:
 
 # 1. login to github and create new remote repo 
-cd ~/Documents # cd into local arent dir 
-git clone https://github.com/<user>/<repo> # 2. clone the remote repo to local parent dir
-cd ~/Documents/<files> ~/Documents/<repo>/<files> # copy some files into the local repo
-cd ~/Documents/<repo> # cd back into the local repo
-git add -A # 3. add files to local repo
-git commit -m "<some message>" # 4. commit files and attach message
-git status # check that files have been commited
-git push origin master # 5. push files to github master branch
-# when prompted enter <user> and <password>
+https://github.com/ # login with your <user> and <password>
+https://github.com/<user> # navigate to your homepage
 
+# 2. cd into local parent dir
+cd ~/Documents
+
+# 3. clone the remote repo to local parent dir
+git clone https://github.com/<user>/<repo>
+
+# 4. copy some new files into the local repo and cd back into the local repo
+cp ~/Documents/<files> ~/Documents/<repo>/<files> 
+cd ~/Documents/<repo>
+
+# 5. add files to local repo
+git add -A 
+
+# 6. commit files, attach message, and check that files have been commited
+git commit -m "<some message>"
+git status
+
+# 7. push files to github master branch
+git push origin master # when prompted enter <user> and <password>
+
+#######################################################
 
 ## cd into the directory you want to track and run git init
-cd ~/Documents/MyGit
+cd ~/Documents/<dir>
 git init
 
 ## check status, view log
@@ -38,6 +56,9 @@ git log
 ## create a .gitignore file
 touch .gitignore
 nano .gitignore
+
+#######################################################
+CONT HERE:
 
 ## add files to the staging area, all=A, file=<myfile>
 git add -A
@@ -54,7 +75,6 @@ git commit -m "This is an initial commit"
 git remote add <name> <url>
 git push
 
-
 ## create a remote repository
 git remote add origin git@github.com:<username>/<repository>.git
 git push origin master
@@ -62,3 +82,7 @@ git push origin master
 ## clone a remote repository, into the current directory, into a specified directory
 git clone https://github.com/<username>/<repository>.git .
 git clone https://github.com/<username>/<repository>.git ~/Documents/MyGit
+
+## get help
+git help <verb>
+git help config
