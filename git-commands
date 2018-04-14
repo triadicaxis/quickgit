@@ -1,0 +1,50 @@
+## https://www.youtube.com/watch?v=HVsySz-h9r4
+## https://git-scm.com/book/en/v2
+## http://ndpsoftware.com/git-cheatsheet.html
+## https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
+
+
+## configure your user.name and user.email
+git config --global user.name "<User Name>"
+git config --global user.email "user.name@gmail.com"
+git config --list
+
+## get help
+git help <verb>
+git help config
+
+## cd into the directory you want to track and run git init
+cd ~/Documents/MyGit
+git init
+
+## check status, view log
+git status
+git log
+
+## create a .gitignore file
+touch .gitignore
+nano .gitignore
+
+## add files to the staging area, all=A, file=<myfile>
+git add -A
+git add myfile.R
+
+## remove files from the staging area, all=<blank>, file=<myfile>
+git reset
+git reset myfile.R
+
+## commit changes
+git commit -m "This is an initial commit"
+
+## push changes to github
+git remote add <name> <url>
+git push
+
+
+## create a remote repository
+git remote add origin git@github.com:<username>/<repository>.git
+git push origin master
+
+## clone a remote repository, into the current directory, into a specified directory
+git clone https://github.com/<username>/<repository>.git .
+git clone https://github.com/<username>/<repository>.git ~/Documents/MyGit
