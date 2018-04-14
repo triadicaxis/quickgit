@@ -13,6 +13,20 @@ git config --list
 git help <verb>
 git help config
 
+## steps to add files to github repo:
+
+# 1. login to github and create new remote repo 
+cd ~/Documents # cd into local arent dir 
+git clone https://github.com/<user>/<repo> # 2. clone the remote repo to local parent dir
+cd ~/Documents/<files> ~/Documents/<repo>/<files> # copy some files into the local repo
+cd ~/Documents/<repo> # cd back into the local repo
+git add -A # 3. add files to local repo
+git commit -m "<some message>" # 4. commit files and attach message
+git status # check that files have been commited
+git push origin master # 5. push files to github master branch
+# when prompted enter <user> and <password>
+
+
 ## cd into the directory you want to track and run git init
 cd ~/Documents/MyGit
 git init
