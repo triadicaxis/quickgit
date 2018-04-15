@@ -43,6 +43,9 @@ git status
 # 7. push files to github master branch
 git push origin master # when prompted enter <user> and <password>
 
+# 8. if you make changes in github: pull updated files from github to local repo
+git pull origin master
+
 #######################################################
 
 ## cd into the directory you want to track and run git init
