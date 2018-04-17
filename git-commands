@@ -8,7 +8,7 @@
 ## Initial steps to setup git: 
 
 # 1. download and install git
-TBC
+http://git-scm.com # choose your OS
 
 ## 2. configure your user.name and user.email
 git config --global user.name "<User Name>"
@@ -61,11 +61,15 @@ touch .gitignore
 nano .gitignore
 
 #######################################################
-CONT HERE:
+## initialise local repository in present dir
+git init
 
 ## add files to the staging area, all=A, file=<myfile>
 git add -A
 git add myfile.R
+
+## check status of working tree
+git status
 
 ## remove files from the staging area, all=<blank>, file=<myfile>
 git reset
@@ -74,9 +78,12 @@ git reset myfile.R
 ## commit changes
 git commit -m "This is an initial commit"
 
-## push changes to github
+## push (upload) changes to github
 git remote add <name> <url>
 git push
+
+## pull (download) latest from remote repository
+git pull
 
 ## create a remote repository
 git remote add origin git@github.com:<username>/<repository>.git
